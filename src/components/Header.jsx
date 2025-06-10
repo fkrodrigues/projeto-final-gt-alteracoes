@@ -1,5 +1,5 @@
 import Logo from "./Logo";
-import Nav from "./Navbar";
+import { NavLink } from "react-router-dom";
 import { Button } from 'primereact/button';
 
 import { FiSearch } from "react-icons/fi";
@@ -56,7 +56,16 @@ const Header = () => {
 
             </div>
             <div className="mt-8" >
-               <Nav/>
+            <ul className="flex gap-8 text-gray-700 
+      ">
+        <li className="relative transition duration-300 hover:text-[#c92071]"><NavLink to={"/"} >Home</NavLink></li>
+
+        <li className="relative transition duration-300 hover:text-[#c92071]"><NavLink to={"/products"}>Produtos</NavLink></li>
+
+        <li className="relative transition duration-300 hover:text-[#c92071]"><NavLink to={"/categories"}>Categorias</NavLink></li>
+
+        <li className="relative transition duration-300 hover:text-[#c92071]"><NavLink to={"/pedidos"}>Meus Pedidos</NavLink></li>
+      </ul>
             </div>
         </header>
      );

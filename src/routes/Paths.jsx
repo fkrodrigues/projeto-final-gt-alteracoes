@@ -1,12 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
-const Home = lazy(() => import("../pages/Home"));
-const AbaProdutoPesquisa = lazy(() => import("../pages/AbaProdutoPesquisa"));
+const Home = lazy(() => import("../pages/HomePage"));
+const ProductListingPage = lazy(() => import("../pages/ProductListingPage"));
+const ProductViewPage = lazy(() => import("../pages/ProductViewPage"));
 
 
 import Layout from "../layout/Layout";
 import Spinner from "../components/spinner/Spinner";
+import Notfound from "../pages/Notfound";
 
 
 const Paths = () => {
@@ -18,7 +20,9 @@ const Paths = () => {
 
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
-              <Route path="/produtos" element={<AbaProdutoPesquisa />} />
+              <Route path="/product" element={<ProductListingPage />} />
+              <Route path="/product/:id" element={<ProductViewPage />} />
+              <Route path="*" element={<Notfound/>}/>
             </Route>
 
           </Routes>
