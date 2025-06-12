@@ -7,40 +7,46 @@ const Section = ({title, titleAlign, link, children}) => {
 
 
   return (
-    <div className="relative">
+    <div className=" flex flex-col ">
+
       <div className="
-       bg-amber-300 
-       w-full h-[600px]
-       flex justify-between
-       p-5
+       w-full 
+       flex justify-center
+       mt-6
       ">
-
-        <div className={` w-full h-[50px]    
-           bg-blue-300 relative
+          <div className={` 
+            w-[1320px] ml-[0px] mb-3 
+           relative
+           
            ${titleAlign === "center"?"text-center":""}`}
-        >
-           {title}
+          >
+           <h3 className="
+           text-[#474747]
+           ">{title}</h3>
 
+          {link && (
            <div className="
-          bg-red-400 w-[100px] h-[50px]
-          absolute right-0 top-0
-           "><a href={link.href}>{link.text}</a></div>
-
+              w-[100px] right-0 top-0
+              absolute
+              
+              text-[#C92071] text-[1rem]
+              hover:text-[#fb3997de]
+              ">
+                <a href={link.href}>
+                  {link.text}
+                </a>
+            </div>
+          )}
+          
+          </div>
         </div>
-        
-      
-     
-      </div>
+
         <div 
-        className="
-         bg-red-400 w-[100px] h-[50px]
-        absolute
-        top-[50%]
-        -translate-y-[50%]
-        right-[50%]
-        translate-x-[50%]
-        z-2
-        ">chi{children}</div>
+          className="
+          w-[100%]
+          ">
+            <div className="mb-12">{children}</div>
+        </div>
    </div>
   );
 };

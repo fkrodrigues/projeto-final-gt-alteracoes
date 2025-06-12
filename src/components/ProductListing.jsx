@@ -1,17 +1,17 @@
-import ItemProduto from "./ProductCard";
+import ProductCard from "./ProductCard";
 
-const ProdutosAlta = ({arrayItemProduto}) => {
+const ProductListing = ({arrayProductCard}) => {
     return ( 
 
         <div className=" 
-          text-[#474747] mt-5 
+          text-[#474747] 
           mb-4 ml-[100px]
           w-[1320px] 
         ">
          
           <div className="flex flex-wrap gap-9">
-            {arrayItemProduto.map((item, index) => (
-                <ItemProduto key={index} discount={item.discount} image={item.image} type={item.type} name={item.name} price={item.price} priceDiscount={item.priceDiscount}/>
+            {arrayProductCard.map((item, index) => (
+                <ProductCard key={index} discount={item.discount} image={item.image} type={item.type} name={item.name} price={item.price} priceDiscount={item.priceDiscount}/>
              ))}
           </div>
 
@@ -19,4 +19,4 @@ const ProdutosAlta = ({arrayItemProduto}) => {
      );
 }
  
-export default ProdutosAlta;
+export default ProductListing;

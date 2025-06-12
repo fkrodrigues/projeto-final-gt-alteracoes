@@ -86,128 +86,128 @@ const ProductListingPage = () => {
 
     ]
 
-    const arrayItemProduto = [
+    const arrayProductCard = [
       {
-        desconto: '30% OFF',
-        imagem: "../public/tenisAlta.png",
-        titulo: 'K-Swiss V8 - Masculino',
-        tipo:"Tênis",
-        precoDe:"$200",
-        precoPor:"$100"
+        discount: '30% OFF',
+        image: "../public/tenisAlta.png",
+        name: 'K-Swiss V8 - Masculino',
+        type:"Tênis",
+        price:"$200",
+        priceDiscount:"$100"
       },
       {
-        desconto: '30% OFF',
-        imagem: "../public/tenisAlta.png",
-        titulo: 'K-Swiss V8 - Masculino',
-        tipo:"Tênis",
-        precoDe:"$200",
-        precoPor:"$100"
+        discount: '30% OFF',
+        image: "../public/tenisAlta.png",
+        name: 'K-Swiss V8 - Masculino',
+        type:"Tênis",
+        price:"$200",
+        priceDiscount:"$100"
       },
       {
-        desconto: '30% OFF',
-        imagem: "../public/tenisAlta.png",
-        titulo: 'K-Swiss V8 - Masculino',
-        tipo:"Tênis",
-        precoDe:"$200",
-        precoPor:"$100"
+        discount: '30% OFF',
+        image: "../public/tenisAlta.png",
+        name: 'K-Swiss V8 - Masculino',
+        type:"Tênis",
+        price:"$200",
+        priceDiscount:"$100"
       },
       {
-        desconto: '30% OFF',
-        imagem: "../public/tenisAlta.png",
-        titulo: 'K-Swiss V8 - Masculino',
-        tipo:"Tênis",
-        precoDe:"$200",
-        precoPor:"$100"
+        discount: '30% OFF',
+        image: "../public/tenisAlta.png",
+        name: 'K-Swiss V8 - Masculino',
+        type:"Tênis",
+        price:"$200",
+        priceDiscount:"$100"
       },
       {
-        desconto: '30% OFF',
-        imagem: "../public/tenisAlta.png",
-        titulo: 'K-Swiss V8 - Masculino',
-        tipo:"Tênis",
-        precoDe:"$200",
-        precoPor:"$100"
+        discount: '30% OFF',
+        image: "../public/tenisAlta.png",
+        name: 'K-Swiss V8 - Masculino',
+        type:"Tênis",
+        price:"$200",
+        priceDiscount:"$100"
       },
       {
-        desconto: '30% OFF',
-        imagem: "../public/tenisAlta.png",
-        titulo: 'K-Swiss V8 - Masculino',
-        tipo:"Tênis",
-        precoDe:"$200",
-        precoPor:"$100"
+        discount: '30% OFF',
+        image: "../public/tenisAlta.png",
+        name: 'K-Swiss V8 - Masculino',
+        type:"Tênis",
+        price:"$200",
+        priceDiscount:"$100"
       },
       {
-        desconto: '30% OFF',
-        imagem: "../public/tenisAlta.png",
-        titulo: 'K-Swiss V8 - Masculino',
-        tipo:"Tênis",
-        precoDe:"$200",
-        precoPor:"$100"
+        discount: '30% OFF',
+        image: "../public/tenisAlta.png",
+        name: 'K-Swiss V8 - Masculino',
+        type:"Tênis",
+        price:"$200",
+        priceDiscount:"$100"
       },
       {
-        desconto: '30% OFF',
-        imagem: "../public/tenisAlta.png",
-        titulo: 'K-Swiss V8 - Masculino',
-        tipo:"Tênis",
-        precoDe:"$200",
-        precoPor:"$100"
+        discount: '30% OFF',
+        image: "../public/tenisAlta.png",
+        name: 'K-Swiss V8 - Masculino',
+        type:"Tênis",
+        price:"$200",
+        priceDiscount:"$100"
       },
       {
-         desconto: '30% OFF',
-         imagem: "../public/tenisAlta.png",
-         titulo: 'K-Swiss V8 - Masculino',
-         tipo:"Tênis",
-         precoDe:"$200",
-         precoPor:"$100"
-       },
-       {
-         desconto: '30% OFF',
-         imagem: "../public/tenisAlta.png",
-         titulo: 'K-Swiss V8 - Masculino',
-         tipo:"Tênis",
-         precoDe:"$200",
-         precoPor:"$100"
-       },
-       {
-         desconto: '30% OFF',
-         imagem: "../public/tenisAlta.png",
-         titulo: 'K-Swiss V8 - Masculino',
-         tipo:"Tênis",
-         precoDe:"$200",
-         precoPor:"$100"
-       },
-       {
-         desconto: '30% OFF',
-         imagem: "../public/tenisAlta.png",
-         titulo: 'K-Swiss V8 - Masculino',
-         tipo:"Tênis",
-         precoDe:"$200",
-         precoPor:"$100"
-       },
-       {
-         desconto: '30% OFF',
-         imagem: "../public/tenisAlta.png",
-         titulo: 'K-Swiss V8 - Masculino',
-         tipo:"Tênis",
-         precoDe:"$200",
-         precoPor:"$100"
-       },
-       {
-         desconto: '30% OFF',
-         imagem: "../public/tenisAlta.png",
-         titulo: 'K-Swiss V8 - Masculino',
-         tipo:"Tênis",
-         precoDe:"$200",
-         precoPor:"$100"
-       },
-       {
-         desconto: '30% OFF',
-         imagem: "../public/tenisAlta.png",
-         titulo: 'K-Swiss V8 - Masculino',
-         tipo:"Tênis",
-         precoDe:"$200",
-         precoPor:"$100"
-       }
-    ]
+        discount: '30% OFF',
+        image: "../public/tenisAlta.png",
+        name: 'K-Swiss V8 - Masculino',
+        type:"Tênis",
+        price:"$200",
+        priceDiscount:"$100"
+      },
+      {
+        discount: '30% OFF',
+        image: "../public/tenisAlta.png",
+        name: 'K-Swiss V8 - Masculino',
+        type:"Tênis",
+        price:"$200",
+        priceDiscount:"$100"
+      },
+      {
+        discount: '30% OFF',
+        image: "../public/tenisAlta.png",
+        name: 'K-Swiss V8 - Masculino',
+        type:"Tênis",
+        price:"$200",
+        priceDiscount:"$100"
+      },
+      {
+        discount: '30% OFF',
+        image: "../public/tenisAlta.png",
+        name: 'K-Swiss V8 - Masculino',
+        type:"Tênis",
+        price:"$200",
+        priceDiscount:"$100"
+      },
+      {
+        discount: '30% OFF',
+        image: "../public/tenisAlta.png",
+        name: 'K-Swiss V8 - Masculino',
+        type:"Tênis",
+        price:"$200",
+        priceDiscount:"$100"
+      },
+      {
+        discount: '30% OFF',
+        image: "../public/tenisAlta.png",
+        name: 'K-Swiss V8 - Masculino',
+        type:"Tênis",
+        price:"$200",
+        priceDiscount:"$100"
+      },
+      {
+        discount: '30% OFF',
+        image: "../public/tenisAlta.png",
+        name: 'K-Swiss V8 - Masculino',
+        type:"Tênis",
+        price:"$200",
+        priceDiscount:"$100"
+      }
+  ]
 
     return ( 
         <div className=" 
@@ -254,7 +254,7 @@ const ProductListingPage = () => {
                  "/>
                 <FiltrarPor arrayFiltros={arrayFiltros}/>
              </div>
-             <ProdutoPesquisa arrayItemProduto={arrayItemProduto}/>
+             <ProdutoPesquisa arrayProductCard={arrayProductCard}/>
           </div>
           
         </div>

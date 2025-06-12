@@ -1,6 +1,6 @@
-import ItemProduto from "./ItemProdutoAlta";
+import ProductCard from "./ItemCollection";
 
-const ProdutoPesquisa = ({arrayItemProduto}) => {
+const ProdutoPesquisa = ({arrayProductCard}) => {
     return ( 
 
         <div className=" 
@@ -15,8 +15,8 @@ const ProdutoPesquisa = ({arrayItemProduto}) => {
           flex justify-between flex-wrap w-[1005px]  
            mb-3 gap-8
           ">
-            {arrayItemProduto.map((item, index) => (
-                <ItemProduto key={index} desconto={item.desconto} imagem={item.imagem} tipo={item.tipo} titulo={item.titulo} precoDe={item.precoDe} precoPor={item.precoPor}/>
+            {arrayProductCard.map((item, index) => (
+                <ProductCard key={index} discount={item.discount} image={item.image} type={item.type} name={item.name} price={item.price} priceDiscount={item.priceDiscount}/>
              ))}
           </div>
 

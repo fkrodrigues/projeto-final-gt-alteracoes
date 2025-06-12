@@ -1,11 +1,11 @@
 import { Button } from 'primereact/button';
 
-const ItemColecao = ({ titulo, imagem,desconto}) => {
+const ItemColecao = ({ titleCard, image,discount}) => {
     return ( 
         <div>
             
             <div className="
-              w-[405] h-[251px] relative
+              w-[405px] h-[251px] relative
             ">
                 <div className='
                     absolute
@@ -16,7 +16,7 @@ const ItemColecao = ({ titulo, imagem,desconto}) => {
                     text-[14px] font-[700]
                     text-[#474747]
                     flex justify-center items-center
-                '>{desconto}</div>
+                '>{discount}</div>
                 <div className='
                     absolute
                     bottom-[40%]
@@ -25,7 +25,7 @@ const ItemColecao = ({ titulo, imagem,desconto}) => {
                     font-bold text-[32px]
                     w-[190px]
                     leading-[36px]
-                '>{titulo}</div>
+                '>{titleCard}</div>
                 <div className='
                       absolute
                       bottom-[30px]
@@ -42,7 +42,7 @@ const ItemColecao = ({ titulo, imagem,desconto}) => {
                     />
                 </div>
                 <div className='gap-[50px]'>
-                    <img className=' rounded-[10px]' src={imagem} alt={imagem} />
+                    <img className=' rounded-[10px]' src={image} alt={image} />
                 </div>
             </div>
         </div>

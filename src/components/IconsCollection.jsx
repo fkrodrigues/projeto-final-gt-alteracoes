@@ -3,17 +3,18 @@ import { GiBilledCap, GiRunningShoe } from "react-icons/gi";
 import { LiaTshirtSolid } from "react-icons/lia";
 import { PiPants } from "react-icons/pi";
 
-const ColecaoIcones = () => {
+const IconsCollection = () => {
     return ( 
         <div className="
           flex flex-col items-center
           w-full
           gap-4
+          mb-[70px]
         ">
-          <h2 className="
+          <h3 className="
            text-[#474747] 
-           mt-[100px]
-        " >Coleções em destaque</h2>
+           mt-[10px] 
+        " >Coleções em destaque</h3>
 
           <div className="flex gap-10">
 
@@ -140,4 +141,4 @@ const ColecaoIcones = () => {
      );
 }
  
-export default ColecaoIcones;
+export default IconsCollection;

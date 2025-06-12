@@ -1,41 +1,15 @@
 
-import ColecaoIcones from "../components/ColecaoIcones";
-import ColecoesDestaque from "../components/ColecoesDestaque";
-
 import { Button } from "primereact/button";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 
-// Importe os estilos necessários
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 
 const Gallery = () => {
-
-  // const data = [
-  //     {
-  //       titulo: 'Novo drop Supreme',
-  //       imagem: "../public/camisa.png",
-  //       desconto:"80% OFF"
-  //     },
-
-  //     {
-  //       titulo: "Coleção Adidas",
-  //       imagem: "../public/tenis.png",
-  //       desconto:"45% OFF"
-  //     },
-
-  //     {
-  //       titulo: "Novo Beats Bass",
-  //       imagem: "../public/fone.png",
-  //       desconto:"59% OFF"
-  //     }
-  //   ]
-
-   
 
   const imageSlide= [
     
@@ -139,15 +113,6 @@ const Gallery = () => {
 
       </div>
 
-           {/* 
-    
-            <ColecoesDestaque data={data} titulo={"Coleções em Destaque"}/>
-    
-            <ColecaoIcones/>
-    
-             */}
-
-            
     </div>
   );
 };

@@ -1,4 +1,4 @@
-const ItemProduct = ({discount, image, type, name, price, priceDiscount}) => {
+const ProductCard = ({discount, image, type, name, price, priceDiscount}) => {
     return ( 
         <div className="w-[300px] h-[439px]">
             <div className="relative
@@ -7,23 +7,24 @@ const ItemProduct = ({discount, image, type, name, price, priceDiscount}) => {
              
              ">
                 <div className='
-                        absolute
-                        bg-[#E7FF86]
-                        rounded-[29px]
-                        w-[96px] h-[32px]
-                        top-[20px] left-[20px]
-                        text-[14px] font-bold
-                        text-[#474747]
-                        flex justify-center items-center
+                    absolute
+                    bg-[#E7FF86]
+                    rounded-[29px]
+                    w-[96px] h-[32px]
+                    top-[20px] left-[20px]
+                    text-[14px] font-bold
+                    text-[#474747]
+                    flex justify-center 
+                    items-center
                 '>{discount}</div>
 
                  <div className='
                     flex justify-center items-center
-                   h-full
+                    h-full
                     '>
                     <img className='
                      -rotate-30 rounded-[10px]
-                     ' src={image} alt="Tênis" />
+                     ' src={image} alt="Tênis"/>
                 </div>
 
                 <div className="
@@ -54,4 +55,4 @@ const ItemProduct = ({discount, image, type, name, price, priceDiscount}) => {
      );
 }
  
-export default ItemProduct;
+export default ProductCard;
