@@ -4,8 +4,17 @@
 @theme{
     --breakpoint-xs: 375px
 }
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+.swiper-dots {
+    @apply w-3 h-3 bg-gray-400 opacity-100 mx-1; /* Cinza claro */
+  }
+  
+  .swiper-dots-active {
+    @apply bg-[#db2777]; /* Azul quando ativo */
+  }
+
 
 @layer base {
     *{
@@ -43,5 +52,7 @@
         left: 0;
         color: #c92071;
     }
+
+    
 }
 

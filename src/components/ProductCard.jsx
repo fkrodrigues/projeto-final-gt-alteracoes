@@ -1,4 +1,4 @@
-const ItemProduto = ({desconto, imagem, tipo, titulo, precoDe, precoPor}) => {
+const ItemProduct = ({discount, image, type, name, price, priceDiscount}) => {
     return ( 
         <div className="w-[300px] h-[439px]">
             <div className="relative
@@ -15,7 +15,7 @@ const ItemProduto = ({desconto, imagem, tipo, titulo, precoDe, precoPor}) => {
                         text-[14px] font-bold
                         text-[#474747]
                         flex justify-center items-center
-                '>{desconto}</div>
+                '>{discount}</div>
 
                  <div className='
                     flex justify-center items-center
@@ -23,30 +23,30 @@ const ItemProduto = ({desconto, imagem, tipo, titulo, precoDe, precoPor}) => {
                     '>
                     <img className='
                      -rotate-30 rounded-[10px]
-                     ' src={imagem} alt="Tênis" />
+                     ' src={image} alt="Tênis" />
                 </div>
 
                 <div className="
                   text-[14px] font-bold
                    text-[#8F8F8F] my-2
                    tracking-[.75px]
-                ">{tipo}</div>
+                ">{type}</div>
 
                 <div className="
                   text-[#474747] text-[26px]
-                ">{titulo}</div>
+                ">{name}</div>
 
                 <div className="flex gap-3">
                     <div className="
                   text-[#8F8F8F] text-[24px]
                     line-through decoration-[1.5px]
-                ">{precoDe}</div>
+                ">{price}</div>
 
                     <div  className="
                   text-[#1F1F1F] text-[24px]
                   font-bold 
 
-                ">{precoPor}</div>
+                ">{priceDiscount}</div>
                 </div>
             </div>
         </div>
@@ -54,4 +54,4 @@ const ItemProduto = ({desconto, imagem, tipo, titulo, precoDe, precoPor}) => {
      );
 }
  
-export default ItemProduto;
+export default ItemProduct;

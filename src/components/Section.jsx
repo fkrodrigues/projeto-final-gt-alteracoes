@@ -1,31 +1,47 @@
-import BannerFinalHome from "./BannerFinalHome";
 
-const Section = () => {
 
-    const contentBannerfinal = {
-        imagem:"../tenisAmareloFinal.png",
-        titulo:"Air Jordan edição de colecionador",
-        descricao:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
-      }
+const Section = ({title, titleAlign, link, children}) => {
+
+   
+
+
 
   return (
-    <>
-      <Section>
-        <BannerFinalHome
-          imagem={contentBannerfinal.imagem}
-          titulo={contentBannerfinal.titulo}
-          descricao={contentBannerfinal.descricao}
-          funcaoBtn={contentBannerfinal.btn}
-        />
-      </Section>
+    <div className="relative">
+      <div className="
+       bg-amber-300 
+       w-full h-[600px]
+       flex justify-between
+       p-5
+      ">
 
-      <BannerFinalHome
-        imagem={contentBannerfinal.imagem}
-        titulo={contentBannerfinal.titulo}
-        descricao={contentBannerfinal.descricao}
-        funcaoBtn={contentBannerfinal.btn}
-      />
-    </>
+        <div className={` w-full h-[50px]    
+           bg-blue-300 relative
+           ${titleAlign === "center"?"text-center":""}`}
+        >
+           {title}
+
+           <div className="
+          bg-red-400 w-[100px] h-[50px]
+          absolute right-0 top-0
+           "><a href={link.href}>{link.text}</a></div>
+
+        </div>
+        
+      
+     
+      </div>
+        <div 
+        className="
+         bg-red-400 w-[100px] h-[50px]
+        absolute
+        top-[50%]
+        -translate-y-[50%]
+        right-[50%]
+        translate-x-[50%]
+        z-2
+        ">chi{children}</div>
+   </div>
   );
 };
 

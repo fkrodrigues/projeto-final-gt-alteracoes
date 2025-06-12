@@ -1,6 +1,6 @@
 import { Button } from "primereact/button";
 
-const BannerFinalHome = ({imagem, titulo, descricao, funcaoBtn}) => {
+const BannerFinalHome = ({image, title, description, }) => {
     return ( 
       <div className=" bg-white 
           flex justify-center items-center
@@ -11,7 +11,7 @@ const BannerFinalHome = ({imagem, titulo, descricao, funcaoBtn}) => {
           <div className="
             w-[575px] h-[330px]
           ">
-            <img src={imagem} alt=""></img>
+            <img src={image} alt=""></img>
           </div>
 
           <div className="flex flex-col 
@@ -26,12 +26,12 @@ const BannerFinalHome = ({imagem, titulo, descricao, funcaoBtn}) => {
               <div className="
                 text-[#474747] text-[48px]
                 font-bold leading-12 mb-7
-              ">{titulo}</div>
+              ">{title}</div>
              
               <div className="
                 mb-6 text-[#474747] tracking-widest
-              ">{descricao}</div>
-               <Button onClick={funcaoBtn} label="Ver Ofertas"
+              ">{description}</div>
+               <Button label="Ver Ofertas"
                     className="
                     bg-[#c92071] text-white
                     p-2.5 rounded-[8px]

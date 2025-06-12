@@ -1,10 +1,20 @@
-import BannerFinalHome from "../components/BannerFinalHome";
+
 import ColecaoIcones from "../components/ColecaoIcones";
 import ColecoesDestaque from "../components/ColecoesDestaque";
-import ProdutosAlta from "../components/ProdutosAlta";
+
 import { Button } from "primereact/button";
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+
+// Importe os estilos necessários
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
 const Gallery = () => {
+
   // const data = [
   //     {
   //       titulo: 'Novo drop Supreme',
@@ -25,93 +35,74 @@ const Gallery = () => {
   //     }
   //   ]
 
-  //   const arrayItemProduto = [
-  //     {
-  //       desconto: '30% OFF',
-  //       imagem: "../public/tenisAlta.png",
-  //       titulo: 'K-Swiss V8 - Masculino',
-  //       tipo:"Tênis",
-  //       precoDe:"$200",
-  //       precoPor:"$100"
-  //     },
-  //     {
-  //       desconto: '30% OFF',
-  //       imagem: "../public/tenisAlta.png",
-  //       titulo: 'K-Swiss V8 - Masculino',
-  //       tipo:"Tênis",
-  //       precoDe:"$200",
-  //       precoPor:"$100"
-  //     },
-  //     {
-  //       desconto: '30% OFF',
-  //       imagem: "../public/tenisAlta.png",
-  //       titulo: 'K-Swiss V8 - Masculino',
-  //       tipo:"Tênis",
-  //       precoDe:"$200",
-  //       precoPor:"$100"
-  //     },
-  //     {
-  //       desconto: '30% OFF',
-  //       imagem: "../public/tenisAlta.png",
-  //       titulo: 'K-Swiss V8 - Masculino',
-  //       tipo:"Tênis",
-  //       precoDe:"$200",
-  //       precoPor:"$100"
-  //     },
-  //     {
-  //       desconto: '30% OFF',
-  //       imagem: "../public/tenisAlta.png",
-  //       titulo: 'K-Swiss V8 - Masculino',
-  //       tipo:"Tênis",
-  //       precoDe:"$200",
-  //       precoPor:"$100"
-  //     },
-  //     {
-  //       desconto: '30% OFF',
-  //       imagem: "../public/tenisAlta.png",
-  //       titulo: 'K-Swiss V8 - Masculino',
-  //       tipo:"Tênis",
-  //       precoDe:"$200",
-  //       precoPor:"$100"
-  //     },
-  //     {
-  //       desconto: '30% OFF',
-  //       imagem: "../public/tenisAlta.png",
-  //       titulo: 'K-Swiss V8 - Masculino',
-  //       tipo:"Tênis",
-  //       precoDe:"$200",
-  //       precoPor:"$100"
-  //     },
-  //     {
-  //       desconto: '30% OFF',
-  //       imagem: "../public/tenisAlta.png",
-  //       titulo: 'K-Swiss V8 - Masculino',
-  //       tipo:"Tênis",
-  //       precoDe:"$200",
-  //       precoPor:"$100"
-  //     },
-  //   ]
+   
 
-  
+  const imageSlide= [
+    
+      {id:1, src: "/public/home slide 1.png"},
+      {id:2, src: "/public/home slide 2.jpeg"},
+      {id:3, src: "/public/home slide 3.jpeg"},
+      {id:4, src: "/public/home slide 4.png"},
+      {id:5, src: "/public/home slide 5.png"},
+      {id:6, src: "/public/home slide 6.png"},
+      {id:7, src: "/public/home slide 7.png"},
+      {id:8, src: "/public/home slide 8.png"},
+  ]
 
-  return (
-    <>
+    return (
+    <div className="relative">
+      
+      <Swiper
+        modules={[Navigation, Pagination]}
+        slidesPerView={1}
+        pagination={{ 
+          clickable: true,
+          dotsClass: 'swiper-dots',
+          dotsActiveClass: 'swiper-dots-active'
+        }}
+        navigation
+        className="w-full h-[680px] object-cover"
+      >
+        {imageSlide.map((image) => (
+          <SwiperSlide key={image.id}>
+            <img 
+              src={image.src} 
+              alt={`Slide ${image.id}`}
+              className="w-full h-full object-cover"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
       <div
         className="
-        w-[1440] h-[681px] bg-[#F5F5F5]
-        overflow-hidden flex relative
-    "
-      >
-        <div
-          className=" w-[510px]
-        h-[398px] mt-[100px] ml-[100px] flex flex-col 
+        overflow-hidden flex
+        rounded-3xl
+        absolute 
+        top-[9.2rem] ml-[100px]
+        z-2
+        bg-[#f5f5f5b7]
+        shadow-2xl
+        backdrop-blur-sm
+        w-[560px] h-[400px]
+        p-5
       "
-        >
+      >
+
+       <div
+          className=" 
+          w-[510px]
+          h-[500px]
+          flex flex-col
+          rounded-lg
+          ml-4
+       ">
           <p
             className="
-          mt-12 tracking-wide
+          tracking-wide
           text-[1rem] text-[#F6AA1C]
           font-bold
+          mt-3
         "
           >
             Melhores ofertas personalizadas
@@ -146,84 +137,18 @@ const Gallery = () => {
           />
         </div>
 
-        <img
-          src="src/assets/Ornament 11.svg"
-          alt="ornamentos"
-          className="
-          absolute
-          w-[140px] h-[140px] 
-          mt-24  right-[80px]
-        "
-        />
-
-        <img
-          src="public/White Sneakers.png"
-          alt=""
-          className="
-            absolute
-            w-[733px]
-            rotate-[-20deg]
-            right-[250px]
-            bottom-[20px]
-            
-        "
-        />
-
-        <div
-          className="
-           h-[12px] w-[60px] 
-           absolute 
-           flex
-           gap-2
-           bottom-[50px]
-           left-[50%]
-           -translate-x-[50%]
-        "
-        >
-          <div
-            className="    
-              w-[10px] h-[10px] 
-              bg-[#db2777]
-              rounded-[50%] 
-            "
-          ></div>
-
-          <div
-            className="    
-              w-[10px] h-[10px] 
-              bg-[#CCCCCC]
-              rounded-[50%] 
-            "
-          ></div>
-
-          <div
-            className="    
-              w-[10px] h-[10px] 
-              bg-[#CCCCCC]
-              rounded-[50%] 
-            "
-          ></div>
-
-          <div
-            className="    
-              w-[10px] h-[10px] 
-              bg-[#CCCCCC]
-              rounded-[50%] 
-            "
-          ></div>
-        </div>
       </div>
 
-      {/* <Banner/>
+           {/* 
     
             <ColecoesDestaque data={data} titulo={"Coleções em Destaque"}/>
     
             <ColecaoIcones/>
     
-            <ProdutosAlta arrayItemProduto={arrayItemProduto} titulo={"Produtos em Alta"}/>
-    
              */}
-    </>
+
+            
+    </div>
   );
 };
 
