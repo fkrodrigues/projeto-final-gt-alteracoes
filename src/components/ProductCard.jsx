@@ -3,8 +3,7 @@ const ProductCard = ({discount, image, type, name, price, priceDiscount}) => {
         <div className="w-[300px] h-[439px]">
             <div className="relative
              bg-white shadow-sm rounded-[5px]
-               w-[315px] h-[347px] 
-             
+               w-[315px] h-[347px]  
              ">
                 <div className='
                     absolute

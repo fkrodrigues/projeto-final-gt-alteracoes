@@ -1,4 +1,4 @@
-const MiniImgDetalhe = ({imagem, alt}) => {
+const ShowThumbs = ({imagem, alt}) => {
     return ( 
         <>
             <div className=" w-[700px] flex      
@@ -16,4 +16,4 @@ const MiniImgDetalhe = ({imagem, alt}) => {
      );
 }
  
-export default MiniImgDetalhe;
+export default ShowThumbs;

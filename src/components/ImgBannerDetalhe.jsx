@@ -1,4 +1,4 @@
-import MiniImgDetalhe from "./MiniImgDetalhe";
+import ShowThumbs from "./ShowThumbs";
 
 const ImgBannerDetalhe = ({imagem, alt, arrayImgBanner}) => {
   return (
@@ -43,7 +43,7 @@ const ImgBannerDetalhe = ({imagem, alt, arrayImgBanner}) => {
       {/* DIV MINI IMGs */}
       <div className="flex gap-2">
         {arrayImgBanner[0].miniImg.map((miniImagem, index) => (
-          <MiniImgDetalhe key={index} alt={alt} imagem={miniImagem} />
+          <ShowThumbs key={index} alt={alt} imagem={miniImagem} />
         ))}
       </div>
     </div>

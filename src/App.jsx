@@ -1,6 +1,4 @@
 import Paths from "./routes/Paths";
-import "./tailwind.css";
-
 
 const App = () => {
 

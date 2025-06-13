@@ -1,6 +1,7 @@
 import BannerProdutoDetalhe from "../components/BannerProdutoDetalhe";
 import InfoDetalheProduto from "../components/InfoDetalheProduto";
-import ProdutoPesquisaDetalhe from "../components/ProdutoPesquisaDetalhe";
+import ProductListing from "../components/ProductListing";
+import Section from "../components/Section";
 
 const ProductViewPage = () => {
 
@@ -17,7 +18,6 @@ const ProductViewPage = () => {
             ]
         }
     ]
-    
     
     const arrayInfo = [
         {
@@ -55,40 +55,50 @@ const ProductViewPage = () => {
         }
     ]
 
-         const arrayItemProduto = [
-      {
-        desconto: '30% OFF',
-        imagem: "../public/tenisAlta.png",
-        titulo: 'K-Swiss V8 - Masculino',
-        tipo:"Tênis",
-        precoDe:"$200",
-        precoPor:"$100"
-      },
-      {
-        desconto: '30% OFF',
-        imagem: "../public/tenisAlta.png",
-        titulo: 'K-Swiss V8 - Masculino',
-        tipo:"Tênis",
-        precoDe:"$200",
-        precoPor:"$100"
-      },
-      {
-        desconto: '30% OFF',
-        imagem: "../public/tenisAlta.png",
-        titulo: 'K-Swiss V8 - Masculino',
-        tipo:"Tênis",
-        precoDe:"$200",
-        precoPor:"$100"
-      },
-      {
-        desconto: '30% OFF',
-        imagem: "../public/tenisAlta.png",
-        titulo: 'K-Swiss V8 - Masculino',
-        tipo:"Tênis",
-        precoDe:"$200",
-        precoPor:"$100"
-      }
+    const arrayProductCard = [
+        {
+            discount: '30% OFF',
+            image: "../public/tenisAlta.png",
+            name: 'K-Swiss V8 - Masculino',
+            type:"Tênis",
+            price:"$200",
+            priceDiscount:"$100"
+          },
+        {
+            discount: '30% OFF',
+            image: "../public/tenisAlta.png",
+            name: 'K-Swiss V8 - Masculino',
+            type:"Tênis",
+            price:"$200",
+            priceDiscount:"$100"
+          },
+        {
+            discount: '30% OFF',
+            image: "../public/tenisAlta.png",
+            name: 'K-Swiss V8 - Masculino',
+            type:"Tênis",
+            price:"$200",
+            priceDiscount:"$100"
+          },
+        {
+            discount: '30% OFF',
+            image: "../public/tenisAlta.png",
+            name: 'K-Swiss V8 - Masculino',
+            type:"Tênis",
+            price:"$200",
+            priceDiscount:"$100"
+          },
     ]
+
+    const infosSection = {
+        title: "Produtos em alta",
+        titleAlign: "",
+    }
+
+    const link = {
+        text: `ver mais ${"\u2192"}`,
+        href: "#",
+      }
 
     return ( 
         <div className="w-full">
@@ -104,7 +114,13 @@ const ProductViewPage = () => {
                descricao={arrayInfo[0].descricao}
                />
            </div>
-           <ProdutoPesquisaDetalhe arrayItemProduto={arrayItemProduto}/>
+           <Section 
+             title={infosSection.title} 
+             link={link}
+             cla
+           >
+               <ProductListing arrayProductCard={arrayProductCard}/>
+           </Section>
         </div>
      );
 }

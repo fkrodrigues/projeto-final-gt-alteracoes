@@ -1,10 +1,4 @@
-
-
 const Section = ({title, titleAlign, link, children}) => {
-
-   
-
-
 
   return (
     <div className=" flex flex-col ">

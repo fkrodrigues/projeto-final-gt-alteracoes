@@ -1,14 +1,14 @@
-import FiltrarPor from "../components/FiltrarPor";
-import ProdutoPesquisa from "../components/ProdutoPesquisa";
+import FilterBy from "../components/FilterBy";
+import ProductListing from "../components/ProductListing";
 
 
 const ProductListingPage = () => {
 
-    const arrayFiltros = [
+    const arrayFilters = [
          
             {
-               "tituloCategoria":"Marca",
-               "array":[
+               "title":"Marca",
+               "inputType":[
                   {
                      "checked":true,
                      "text":"Adidas"
@@ -32,8 +32,8 @@ const ProductListingPage = () => {
                ]
             },
             {
-               "tituloCategoria":"Categoria",
-               "array":[
+               "title":"Categoria",
+               "inputType":[
                   {
                      "checked":true,
                      "text":"Esporte e Lazer"
@@ -53,8 +53,8 @@ const ProductListingPage = () => {
                ]
             },
             {
-               "tituloCategoria":"Gênero",
-               "array":[
+               "title":"Gênero",
+               "inputType":[
                   {
                      "checked":true,
                      "text":"Masculino"
@@ -70,8 +70,8 @@ const ProductListingPage = () => {
                ]
             },
             {
-               "tituloCategoria":"Estado",
-               "array":[
+               "title":"Estado",
+               "inputType":[
                   {
                      "radio":true,"checked": true,
                      "text":"Novo"
@@ -213,7 +213,7 @@ const ProductListingPage = () => {
         <div className=" 
            flex flex-col items-center 
            xs: 
-           h-[2600px]
+           h-[2600px] 
         ">
 
           <div className="flex justify-between w-[1300px] my-10">
@@ -239,12 +239,12 @@ const ProductListingPage = () => {
 
           </div>
 
-          <div className="flex w-[1300px]
-             h-[720px]
+          <div className="flex flex-wrap w-[1300px]
+             h-[720px] relative
           ">
              <div className="
                bg-white
-               w-[310px]
+               w-[280px]
                text-[#474747]
                ">
                 <h4 className="my-5 ml-5  w-30">Filtrar por</h4>
@@ -252,9 +252,15 @@ const ProductListingPage = () => {
                  text-[#CCCCCC] w-[220px]
                   ml-5
                  "/>
-                <FiltrarPor arrayFiltros={arrayFiltros}/>
+                <FilterBy arrayFilters={arrayFilters}/>
              </div>
-             <ProdutoPesquisa arrayProductCard={arrayProductCard}/>
+                <section className="
+                  w-[1090px] 
+                  flex flex-wrap
+                  absolute right-0
+                ">
+                    <ProductListing arrayProductCard={arrayProductCard}/>
+                 </section>
           </div>
           
         </div>

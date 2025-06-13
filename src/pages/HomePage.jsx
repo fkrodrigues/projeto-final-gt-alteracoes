@@ -106,11 +106,6 @@ const Home = () => {
       }
     ]
    
-  const infosSection2 = {
-      title: "Coleções em Destaque",
-      titleAlign: "center",
-  }
-
   const infosSection3 = {
       title: "Produtos em alta",
       titleAlign: "",
