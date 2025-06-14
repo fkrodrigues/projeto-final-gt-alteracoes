@@ -1,55 +1,44 @@
-import BannerProdutoDetalhe from "../components/BannerProdutoDetalhe";
-import InfoDetalheProduto from "../components/InfoDetalheProduto";
+import Gallery2 from "../components/Gallery2";
 import ProductListing from "../components/ProductListing";
+import ProductOptions from "../components/ProductOptions ";
 import Section from "../components/Section";
+import BuyBox from "../components/BuyBox";
+import Gallery from "../components/Gallery2";
+import ShowThumbs from "../components/ShowThumbs";
 
 const ProductViewPage = () => {
-
-    const arrayImgBanner = [
-        {
-            imagem:"../public/t1.png",
-            alt: "Tênis",
-            miniImg:[
-                "../public/t1.png",
-                "../public/t2.png",
-                "../public/t3.png",
-                "../public/t4.png",
-                "../public/t5.png"
-            ]
-        }
-    ]
     
-    const arrayInfo = [
+    const arrayInfoBuybox = [
         {
-            titulo:"Tênis Nike Revolution 6 Next Nature Masculino",
+            name:"Tênis Nike Revolution 6 Next Nature Masculino",
             ref: "Casual | Nike | REF:38416711",
-            avaliacao:[
+            rating:[
                 {
                     id: 1,
-                    estrela: true
+                    stars: true
                 },
                 {
                     id: 2,
-                    estrela: true
+                    stars: true
                 },
                 {
                     id: 3,
-                    estrela: true
+                    stars: true
                 },
                 {
                     id: 4,
-                    estrela: true
+                    stars: true
                 },
                 {
                     id: 5,
-                    estrela: false
+                    stars: false
                 },
             ],
-            pontuacao: "4.7",
-            qntNota: "90 avaliações",
-            precoPor:"219,00",
-            precoDe:"320,00",
-            descricao :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+            score: "4.7",
+            qntAvaliation: "90 avaliações",
+            priceDiscount:"219,00",
+            price:"320,00",
+            description :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
             tamanho:[ "39","40","41","42","43"],
             cor:[ "1","2","3","4","5"],
         }
@@ -100,20 +89,59 @@ const ProductViewPage = () => {
         href: "#",
       }
 
+    const slideGallery= [
+    
+        {id:1, src: "/public/produc-image-1.jpeg"},
+        {id:2, src: "/public/produc-image-2.jpeg"},
+        {id:3, src: "/public/produc-image-3.jpeg"},
+        {id:4, src: "/public/produc-image-4.jpeg"},
+        {id:5, src: "/public/produc-image-5.jpeg"},
+    ]
+
+    const imagesShowTrumbs= [
+    
+        {src: "/public/product-thumb-1.jpeg",
+         alt: "Tênis"
+        },
+        {src: "/public/product-thumb-2.jpeg",
+          alt: "Tênis"
+        },
+        {src: "/public/product-thumb-3.jpeg",
+          alt: "Tênis"
+        },
+        {src: "/public/product-thumb-4.jpeg",
+          alt: "Tênis"
+        },
+        {src: "/public/product-thumb-5.jpeg",
+          alt: "Tênis"
+        },
+    ]
+
     return ( 
         <div className="w-full">
-           <div className="flex bg-amber-100 ">
-               <BannerProdutoDetalhe arrayImgBanner={arrayImgBanner} />
-               <InfoDetalheProduto 
-               titulo={arrayInfo[0].titulo}
-               ref={arrayInfo[0].ref}
-               avaliacao={arrayInfo[0].avaliacao} pontuacao={arrayInfo[0].pontuacao} 
-               qntNota={arrayInfo[0].qntNota}
-               precoPor={arrayInfo[0].precoPor}
-               precoDe={arrayInfo[0].precoDe}
-               descricao={arrayInfo[0].descricao}
+
+           <p className="text-[#474747] mt-5 mb-10 ml-[100px] text-[15px]"><strong>Home</strong> / Produtos / Tênis /Nike / Tênis Nike Revolution 6 Next Nature Masculino
+           </p>
+
+           <div className="flex h-[700px] ">
+               
+               <Gallery 
+            //    children={<ShowThumbs/>}
+               slideGallery={slideGallery} imagesShowTrumbs={imagesShowTrumbs}/>
+                             
+               <BuyBox 
+               name={arrayInfoBuybox[0].name}
+               ref={arrayInfoBuybox[0].ref}
+               rating={arrayInfoBuybox[0].rating} 
+               score={arrayInfoBuybox[0].score} 
+               qntAvaliation={arrayInfoBuybox[0].qntAvaliation}
+               priceDiscount={arrayInfoBuybox[0].priceDiscount}
+               price={arrayInfoBuybox[0].price}
+               description={arrayInfoBuybox[0].description}
+               children={<ProductOptions/>}
                />
            </div>
+           
            <Section 
              title={infosSection.title} 
              link={link}

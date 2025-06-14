@@ -1,11 +1,11 @@
 
 import { Rating, RatingStar } from "flowbite-react";
 
-const NotaAvaliacao = ({estrelas, valorNota,qntNota}) => {
+const RatingNote = ({stars, score,qntAvaliation}) => {
   return (
     <Rating >
-      {estrelas.map((item, index) => (
-      <RatingStar key={index} filled={item.estrela}/>
+      {stars.map((item, index) => (
+      <RatingStar key={index} filled={item.stars}/>
       ))}
       <p className="
           flex items-center justify-center
@@ -15,7 +15,7 @@ const NotaAvaliacao = ({estrelas, valorNota,qntNota}) => {
           bg-[#F6AA1C] rounded-[4px]
           p-1 w-[63px] h-[23px] mr-2
           ">
-            {valorNota} 
+            {score} 
             <RatingStar className="
             text-white
             
@@ -23,9 +23,9 @@ const NotaAvaliacao = ({estrelas, valorNota,qntNota}) => {
        </p>
 
        <p className="text-[#8F8F8F] text-[14px]">  
-         ({qntNota})
+         ({qntAvaliation})
        </p>
     </Rating>
   );
 }
-export default NotaAvaliacao;
+export default RatingNote;

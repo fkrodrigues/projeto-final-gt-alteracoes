@@ -1,50 +1,54 @@
 import { Button } from 'primereact/button';
-import NotaAvaliacao from './NotaAvaliacao';
+import RatingNote from './RatingNote';
 
 
-const InfoDetalheProduto = ({titulo, ref, avaliacao, pontuacao, qntNota, precoPor, precoDe, descricao, tamanho, cor}) => {
+const BuyBox = ({name, ref, rating, score, qntAvaliation, priceDiscount, price, description, children}) => {
 
     return ( 
-        <div className='w-[440px] h-[570px]     bg-red-200 mt-[83px] ml-10'>
+        <div className='w-[440px] h-[570px]       ml-10 '>
+
           <h1 className='
             leading-[40px] font-bold
             text-[#1F1F1F] text-[35px]
-          '>{titulo}</h1>
+          '>{name}</h1>
           <p className='
              text-[#666666] text-[12px]
+             py-3
           '>{ref}
           </p>
-          <NotaAvaliacao
-          estrelas={avaliacao}
-          valorNota={pontuacao} 
-          qntNota={qntNota}
+          <RatingNote
+          stars={rating}
+          score={score} 
+          qntAvaliation={qntAvaliation}
           />
           <div className='
-            flex items-baseline-last gap-2 
+            flex items-baseline-last 
+            gap-2 py-3
           '>
 
             R$<div className='
             flex items-end mb-0
             text-[30px] text-[#474747]
             font-bold
-            '>{precoPor}</div>
+            '>{priceDiscount}</div>
 
             <div  className='
             text-[15px] text-[#CCCCCC]
             line-through
-            '>R$ {precoDe}</div>
+            '>R$ {price}</div>
 
           </div>
 
           <h4 className='
-          text-[#8F8F8F] 
+          text-[#8F8F8F] mb-2
           '>Descrição do produto</h4>
           <div className='
           text-[#474747] 
-          '>{descricao}</div>
+          '>{description}</div>
 
-          <div>{tamanho}</div>
-          <div>{cor}</div>
+          <div className='py-3'
+          
+          >{children}</div>
           
           <Button label="Comprar"
               className="
@@ -58,4 +62,4 @@ const InfoDetalheProduto = ({titulo, ref, avaliacao, pontuacao, qntNota, precoPo
      );
 }
  
-export default InfoDetalheProduto;
+export default BuyBox;

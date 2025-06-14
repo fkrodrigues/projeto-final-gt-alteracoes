@@ -1,3 +1,4 @@
+import BannerHome from "../components/BannerHome";
 import Collection from "../components/Collection";
 import Gallery from "../components/Gallery";
 import IconsCollection from "../components/IconsCollection";
@@ -113,7 +114,7 @@ const Home = () => {
 
   return ( 
     <>
-        <Gallery/>
+        <Gallery children={<BannerHome/>}/>
         <Section 
           children={
             <Collection 

@@ -6,7 +6,7 @@ import { FiSearch } from "react-icons/fi";
 
 const Header = () => {
     return ( 
-        <header className=" h-45 px-25 py-5 bg-white">
+        <header className="h-45 px-25 py-5 bg-white">
             <div className="flex justify-between items-center">
                 <Logo/>
                 <div className="relative">
@@ -55,18 +55,18 @@ const Header = () => {
                 </div>
 
             </div>
-            <div className="mt-8" >
-              <ul className="flex gap-8 text-gray-700 
+            <div className="mt-8 " >
+              <ul className="flex gap-8 h-[25px]  text-gray-700 
               ">
-                <li className="relative transition duration-300 hover:text-[#c92071]"><NavLink to={"/"} >Home</NavLink></li>
+                <li className=" w-[60px] relative transition duration-300 hover:text-[#c92071]"><NavLink to={"/"} >Home</NavLink></li>
 
-                <li className="relative transition duration-300 hover:text-[#c92071]"><NavLink to={"/products"}>Produtos</NavLink></li>
+                <li className=" w-[80px] relative transition duration-300 hover:text-[#c92071]"><NavLink to={"/products"}>Produtos</NavLink></li>
 
-                <li className="relative transition duration-300 hover:text-[#c92071]"><NavLink to={"/categories"}>Categorias</NavLink></li>
+                <li className=" w-[90px] relative transition duration-300 hover:text-[#c92071]"><NavLink to={"/categories"}>Categorias</NavLink></li>
 
-                <li className="relative transition duration-300 hover:text-[#c92071]"><NavLink to={"/pedidos"}>Meus Pedidos</NavLink></li>
+                <li className=" relative transition duration-300 hover:text-[#c92071]"><NavLink to={"/pedidos"}>Meus Pedidos</NavLink></li>
             </ul>
-         </div>
+           </div>
       </header>
      );
 }
