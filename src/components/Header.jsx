@@ -55,10 +55,10 @@ const Header = () => {
                 </div>
 
             </div>
-            <div className="mt-8 " >
+            <div className="mt-8 -translate-x-2 " >
               <ul className="flex gap-8 h-[25px]  text-gray-700 
               ">
-                <li className=" w-[60px] relative transition duration-300 hover:text-[#c92071]"><NavLink to={"/"} >Home</NavLink></li>
+                <li className=" w-[60px] relative transition duration-300 hover:text-[#c92071] text-center"><NavLink to={"/"} >Home</NavLink></li>
 
                 <li className=" w-[80px] relative transition duration-300 hover:text-[#c92071]"><NavLink to={"/products"}>Produtos</NavLink></li>
 

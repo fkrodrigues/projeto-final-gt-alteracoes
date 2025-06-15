@@ -1,4 +1,10 @@
+// import { useParams } from "react-router-dom";
+
+
 const ProductCard = ({discount, image, type, name, price, priceDiscount}) => {
+
+  // const { id } = useParams();
+
     return ( 
         <div className="w-[300px] h-[439px]">
             <div className="relative

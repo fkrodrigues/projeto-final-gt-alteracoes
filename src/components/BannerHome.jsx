@@ -1,13 +1,39 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 
-const BannerHome = () => {
+import { Button } from "primereact/button";
+
+const BannerHome = ({ imageSlide }) => {
   return (
-   
+    <>
+      <Swiper
+        modules={[Navigation, Pagination]}
+        slidesPerView={1}
+        pagination={{
+          clickable: true,
+          dotsClass: "swiper-dots",
+          dotsActiveClass: "swiper-dots-active",
+        }}
+        navigation
+        className="w-full h-[680px]"
+      >
+        {imageSlide.map((image) => (
+          <SwiperSlide key={image.id}>
+            <img
+              src={image.src}
+              alt={`Slide ${image.id}`}
+              className="w-full h-full "
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
       <div
         className="
         overflow-hidden flex
         rounded-3xl
         absolute 
-        top-[9.2rem] ml-[100px]
+        top-[9rem] ml-[100px]
         z-2
         bg-[#f5f5f5b7]
         shadow-2xl
@@ -53,22 +79,19 @@ const BannerHome = () => {
             laboris eiusmod irure consectetur.
           </p>
 
-          <button 
-                className="
-                  bg-[#c92071] text-white
-                  p-2.5 rounded-[8px]
-                  w-[210px] text-[.9rem]
-                  tracking-[1px] font-bold
-                  hover:bg-[#db2777]
-                  hover:cursor-pointer
-                " 
-          
-          >
-             Ver Ofertas
-          </button>
+          <Button
+            label="Ver Ofertas"
+            className="
+            bg-[#c92071] text-white
+            p-2.5 rounded-[8px]
+            w-[210px] text-[.9rem]
+            tracking-[1px]
+            hover:bg-[#db2777]
+            "
+          />
         </div>
       </div>
-    
+    </>
   );
 };
 

@@ -15,12 +15,11 @@ const RatingNote = ({stars, score,qntAvaliation}) => {
           bg-[#F6AA1C] rounded-[4px]
           p-1 w-[63px] h-[23px] mr-2
           ">
-            {score} 
-            <RatingStar className="
+           {score} 
+      <RatingStar className="
             text-white
-            
             "/>
-       </p>
+      </p>
 
        <p className="text-[#8F8F8F] text-[14px]">  
          ({qntAvaliation})

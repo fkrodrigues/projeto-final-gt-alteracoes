@@ -1,12 +1,13 @@
-import Gallery2 from "../components/Gallery2";
 import ProductListing from "../components/ProductListing";
 import ProductOptions from "../components/ProductOptions ";
 import Section from "../components/Section";
 import BuyBox from "../components/BuyBox";
-import Gallery from "../components/Gallery2";
+import Gallery from "../components/ShowThumbs";
 import ShowThumbs from "../components/ShowThumbs";
 
 const ProductViewPage = () => {
+
+
     
     const arrayInfoBuybox = [
         {
@@ -89,7 +90,7 @@ const ProductViewPage = () => {
         href: "#",
       }
 
-    const slideGallery= [
+    const slideGallery = [
     
         {id:1, src: "/public/produc-image-1.jpeg"},
         {id:2, src: "/public/produc-image-2.jpeg"},
@@ -98,7 +99,7 @@ const ProductViewPage = () => {
         {id:5, src: "/public/produc-image-5.jpeg"},
     ]
 
-    const imagesShowTrumbs= [
+    const imagesShowTrumbs = [
     
         {src: "/public/product-thumb-1.jpeg",
          alt: "Tênis"
@@ -117,18 +118,24 @@ const ProductViewPage = () => {
         },
     ]
 
+    // const imageSlide= [
+    //   null
+    // ]
+
+
     return ( 
         <div className="w-full">
 
-           <p className="text-[#474747] mt-5 mb-10 ml-[100px] text-[15px]"><strong>Home</strong> / Produtos / Tênis /Nike / Tênis Nike Revolution 6 Next Nature Masculino
+           <p className="text-[#474747] mt-5 mb-10 ml-[100px] text-[15px]">
+            <strong>Home</strong> / Produtos / Tênis /Nike / Tênis Nike Revolution 6 Next Nature Masculino
            </p>
 
            <div className="flex h-[700px] ">
-               
                <Gallery 
-            //    children={<ShowThumbs/>}
-               slideGallery={slideGallery} imagesShowTrumbs={imagesShowTrumbs}/>
-                             
+                 show="showThumbs"
+                 slideGallery={slideGallery}
+                 imagesShowTrumbs={imagesShowTrumbs}
+               />
                <BuyBox 
                name={arrayInfoBuybox[0].name}
                ref={arrayInfoBuybox[0].ref}
